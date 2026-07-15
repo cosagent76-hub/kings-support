@@ -44,6 +44,10 @@ a {
   font-weight: 700;
 }
 
+:target {
+  scroll-margin-top: 20px;
+}
+
 .site-header {
   border-bottom: 1px solid var(--line);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
@@ -151,6 +155,11 @@ a {
   color: var(--accent);
 }
 
+button.button {
+  font: inherit;
+  cursor: pointer;
+}
+
 main {
   width: min(1040px, calc(100% - 32px));
   margin: 0 auto;
@@ -191,6 +200,19 @@ main {
 .panel ul:last-child,
 .panel ol:last-child {
   margin-bottom: 0;
+}
+
+.learn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.learn-link::after {
+  content: "→";
+  font-size: 1.1em;
 }
 
 .wide {
@@ -266,6 +288,12 @@ main {
   gap: 16px;
 }
 
+.variation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .screenshot-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -286,6 +314,7 @@ main {
   height: auto;
   border-radius: 7px;
   border: 1px solid var(--line);
+  background: #f7f3eb;
 }
 
 .screenshot-card figcaption {
@@ -366,6 +395,94 @@ main {
   max-width: 860px;
 }
 
+.print-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  padding: 42px 0 22px;
+}
+
+.print-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.print-hero p {
+  max-width: 600px;
+  color: var(--muted);
+}
+
+.print-hero .eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.print-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding-top: 0 !important;
+}
+
+.print-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 16px;
+  break-inside: avoid;
+}
+
+.print-card h2 {
+  margin: 0 0 8px;
+}
+
+.print-card p,
+.print-card li {
+  color: var(--muted);
+}
+
+.print-card ul,
+.print-card ol {
+  margin-bottom: 0;
+  padding-left: 22px;
+}
+
+.wild-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.wild-strip span {
+  min-width: 34px;
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface-strong);
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.rules-table.compact th,
+.rules-table.compact td {
+  padding: 8px 10px;
+}
+
+.gallery-page {
+  max-width: 1040px;
+}
+
 .notice {
   border-left: 4px solid var(--gold);
   background: var(--surface);
@@ -417,9 +534,15 @@ main {
   }
 
   .card-examples,
+  .variation-grid,
   .screenshot-grid,
-  .meta-list {
+  .meta-list,
+  .print-grid {
     grid-template-columns: 1fr;
+  }
+
+  .print-hero {
+    display: block;
   }
 
   .button {
@@ -438,6 +561,7 @@ main {
   body {
     background: #ffffff;
     color: #000000;
+    font-size: 11pt;
   }
 
   main,
@@ -451,6 +575,19 @@ main {
     padding: 0 0 12px;
   }
 
+  .print-hero {
+    padding: 0 0 10px;
+    display: block;
+  }
+
+  .print-hero h1 {
+    font-size: 28pt;
+  }
+
+  .print-hero p {
+    margin: 4px 0;
+  }
+
   .content section {
     padding: 10px 0;
     break-inside: avoid;
@@ -458,8 +595,29 @@ main {
 
   .rules-table,
   .panel,
-  .notice {
+  .notice,
+  .print-card {
     border-color: #999999;
     background: #ffffff;
+  }
+
+  .print-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .print-card {
+    padding: 9px;
+  }
+
+  .print-card h2 {
+    font-size: 13pt;
+  }
+
+  .print-card p,
+  .print-card li,
+  .rules-table.compact th,
+  .rules-table.compact td {
+    font-size: 9pt;
   }
 }

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414 900" role="img" aria-labelledby="title desc">
+  <title id="title">Kings Score Hand screen preview</title>
+  <desc id="desc">A phone preview of the Kings scoreboard with the Score Hand button.</desc>
+  <rect width="414" height="900" fill="#f7f3eb"/>
+  <rect x="28" y="46" width="358" height="808" rx="42" fill="#ffffff" stroke="#ded5c5" stroke-width="3"/>
+  <text x="62" y="122" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="20" font-weight="800" fill="#625f58">Hand 4 of 13</text>
+  <text x="62" y="168" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="42" font-weight="800" fill="#171613">WILD: 4</text>
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">
+    <rect x="62" y="226" width="134" height="118" rx="18" fill="#fffdf8" stroke="#ded5c5" stroke-width="2"/>
+    <text x="88" y="272" font-size="21" font-weight="800" fill="#171613">Alex</text>
+    <text x="88" y="322" font-size="42" font-weight="900" fill="#1b6f65">42</text>
+    <rect x="218" y="226" width="134" height="118" rx="18" fill="#fffdf8" stroke="#ded5c5" stroke-width="2"/>
+    <text x="244" y="272" font-size="21" font-weight="800" fill="#171613">Sam</text>
+    <text x="244" y="322" font-size="42" font-weight="900" fill="#171613">55</text>
+    <rect x="62" y="366" width="134" height="118" rx="18" fill="#fffdf8" stroke="#ded5c5" stroke-width="2"/>
+    <text x="88" y="412" font-size="21" font-weight="800" fill="#171613">Jo</text>
+    <text x="88" y="462" font-size="42" font-weight="900" fill="#171613">61</text>
+    <rect x="218" y="366" width="134" height="118" rx="18" fill="#fffdf8" stroke="#ded5c5" stroke-width="2"/>
+    <text x="244" y="412" font-size="21" font-weight="800" fill="#171613">Tay</text>
+    <text x="244" y="462" font-size="42" font-weight="900" fill="#b6332b">88</text>
+  </g>
+  <rect x="62" y="606" width="290" height="66" rx="12" fill="#1b6f65"/>
+  <text x="207" y="648" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="25" font-weight="800" fill="#ffffff">Score Hand</text>
+  <text x="207" y="718" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="18" fill="#625f58">Review totals, then score the next hand.</text>
+</svg>

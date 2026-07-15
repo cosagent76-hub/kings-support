@@ -16,81 +16,99 @@
         </a>
         <div class="nav-links">
           <a href="../play/">How to Play</a>
+          <a href="../gallery/">Gallery</a>
           <a href="./">Print Rules</a>
           <a href="../support/">Support</a>
           <a href="../privacy/">Privacy</a>
           <a href="../age/">Age Info</a>
+          <a href="../support/#support-contact">Request Help</a>
         </div>
       </nav>
     </header>
 
     <main class="content print-sheet">
-      <div class="page-title">
-        <h1>Kings Rule Sheet</h1>
-        <p>Print this page or save it as a PDF for game night.</p>
+      <div class="print-hero">
+        <div>
+          <p class="eyebrow">13 hands · changing wilds · low score wins</p>
+          <h1>Kings Rule Sheet</h1>
+          <p>Print this page or save it as a PDF for game night. Agree on any house rules before the first deal.</p>
+        </div>
         <div class="actions">
           <button class="button" onclick="window.print()">Print Rule Sheet</button>
           <a class="button secondary" href="../play/">Full Rules</a>
         </div>
       </div>
 
-      <section>
-        <h2>Setup</h2>
-        <table class="rules-table">
-          <tbody>
-            <tr><th scope="row">Players</th><td>2 to 6.</td></tr>
-            <tr><th scope="row">Deck</th><td>One deck plus 2 jokers.</td></tr>
-            <tr><th scope="row">Deal</th><td>Each player gets 7 cards. The dealer gets 8 and starts.</td></tr>
-            <tr><th scope="row">Goal</th><td>Get rid of your cards. Low score wins.</td></tr>
-          </tbody>
-        </table>
-      </section>
+      <section class="print-grid">
+        <article class="print-card">
+          <h2>Setup</h2>
+          <ul>
+            <li>2 to 6 players.</li>
+            <li>One deck plus 2 jokers.</li>
+            <li>Deal 7 cards to each player.</li>
+            <li>The dealer gets 8 cards and starts.</li>
+            <li>Play 13 hands. Low total wins.</li>
+          </ul>
+        </article>
 
-      <section>
-        <h2>Wild Cards</h2>
-        <p>Jokers are always wild. The hand number sets the other wild card:</p>
-        <p>A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K.</p>
-      </section>
+        <article class="print-card">
+          <h2>Wild Cards</h2>
+          <p>Jokers are always wild. The hand number sets the other wild card.</p>
+          <div class="wild-strip" aria-label="Wild order">
+            <span>A</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>J</span><span>Q</span><span>K</span>
+          </div>
+        </article>
 
-      <section>
-        <h2>Turn</h2>
-        <ol>
-          <li>Draw from the deck or discard pile.</li>
-          <li>Play sets, runs, or add to melds if you can.</li>
-          <li>Discard 1 card to end your turn.</li>
-        </ol>
-        <p>The first dealer turn skips the draw because the dealer already has 8 cards.</p>
-      </section>
+        <article class="print-card">
+          <h2>Your Turn</h2>
+          <ol>
+            <li>Draw from the deck or discard pile.</li>
+            <li>Play sets, runs, or add to melds.</li>
+            <li>Discard 1 card to end your turn.</li>
+          </ol>
+          <p>The first dealer turn skips the draw because the dealer already has 8 cards.</p>
+        </article>
 
-      <section>
-        <h2>Melds</h2>
-        <ul>
-          <li>A set is 3 or more cards with the same rank.</li>
-          <li>A run is 3 or more cards in order and in the same suit.</li>
-          <li>Aces are low. A-2-3 works. Q-K-A does not.</li>
-          <li>Open with your own set or run before adding to another player.</li>
-        </ul>
-      </section>
+        <article class="print-card">
+          <h2>Melds</h2>
+          <ul>
+            <li>A set is 3 or more cards with the same rank.</li>
+            <li>A run is 3 or more cards in order and in the same suit.</li>
+            <li>Aces are low. A-2-3 works. Q-K-A does not unless you use that house rule.</li>
+            <li>Open with your own set or run before adding to another player.</li>
+          </ul>
+        </article>
 
-      <section>
-        <h2>Scoring</h2>
-        <table class="rules-table">
-          <tbody>
-            <tr><th scope="row">Player went out</th><td>0 points.</td></tr>
-            <tr><th scope="row">Aces</th><td>1 point, unless wild.</td></tr>
-            <tr><th scope="row">2 to 10</th><td>Face value.</td></tr>
-            <tr><th scope="row">J, Q, K</th><td>10 points.</td></tr>
-            <tr><th scope="row">Wild rank</th><td>20 points.</td></tr>
-            <tr><th scope="row">Joker</th><td>20 points.</td></tr>
-          </tbody>
-        </table>
+        <article class="print-card">
+          <h2>Scoring</h2>
+          <table class="rules-table compact">
+            <tbody>
+              <tr><th scope="row">Went out</th><td>0</td></tr>
+              <tr><th scope="row">Ace</th><td>1, unless wild</td></tr>
+              <tr><th scope="row">2 to 10</th><td>Face value</td></tr>
+              <tr><th scope="row">J, Q, K</th><td>10</td></tr>
+              <tr><th scope="row">Wild rank</th><td>20</td></tr>
+              <tr><th scope="row">Joker</th><td>20</td></tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article class="print-card">
+          <h2>Common House Rules</h2>
+          <ul>
+            <li>No jokers.</li>
+            <li>No wild cards.</li>
+            <li>Aces high or low, so Q-K-A works.</li>
+            <li>Dealer gets 7 cards. Flip the next card to start the discard pile.</li>
+          </ul>
+        </article>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="footer-inner">
         <span>Kings 1.0 · SCIM Ventures · Copyright 2026</span>
-        <span><a href="../">Home</a> · <a href="../support/">Support</a></span>
+        <span><a href="../">Home</a> · <a href="../play/">How to Play</a> · <a href="../gallery/">Gallery</a> · <a href="../support/">Support</a></span>
       </div>
     </footer>
   </body>
