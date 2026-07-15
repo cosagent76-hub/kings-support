@@ -8,5 +8,7 @@ Published with GitHub Pages at:
 - Privacy: https://cosagent76-hub.github.io/kings-support/privacy/
 - How to Play: https://cosagent76-hub.github.io/kings-support/play/
 - Age Suitability: https://cosagent76-hub.github.io/kings-support/age/
+- Printable Rules: https://cosagent76-hub.github.io/kings-support/printable/
+- Changelog: https://cosagent76-hub.github.io/kings-support/changelog/
 
 This repository intentionally contains only public website content. It does not contain the Kings app source code, signing assets, App Store package, or private App Review contact information.

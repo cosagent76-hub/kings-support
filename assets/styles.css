@@ -266,6 +266,34 @@ main {
   gap: 16px;
 }
 
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.screenshot-card {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 12px;
+}
+
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+  border: 1px solid var(--line);
+}
+
+.screenshot-card figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .card-line {
   display: flex;
   gap: 8px;
@@ -313,6 +341,29 @@ main {
 .meta-item strong {
   display: block;
   margin-bottom: 4px;
+}
+
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.print-sheet {
+  max-width: 860px;
 }
 
 .notice {
@@ -366,11 +417,49 @@ main {
   }
 
   .card-examples,
+  .screenshot-grid,
   .meta-list {
     grid-template-columns: 1fr;
   }
 
   .button {
     width: 100%;
+  }
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .actions,
+  .nav-links {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  main,
+  .content {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+
+  .page-title {
+    padding: 0 0 12px;
+  }
+
+  .content section {
+    padding: 10px 0;
+    break-inside: avoid;
+  }
+
+  .rules-table,
+  .panel,
+  .notice {
+    border-color: #999999;
+    background: #ffffff;
   }
 }

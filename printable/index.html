@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kings Printable Rule Sheet</title>
+    <meta name="description" content="A printable one-page rule sheet for Kings.">
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="../">
+          <img src="../assets/kings-icon.png" alt="Kings app icon">
+          <span>Kings</span>
+        </a>
+        <div class="nav-links">
+          <a href="../play/">How to Play</a>
+          <a href="./">Print Rules</a>
+          <a href="../support/">Support</a>
+          <a href="../privacy/">Privacy</a>
+          <a href="../age/">Age Info</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="content print-sheet">
+      <div class="page-title">
+        <h1>Kings Rule Sheet</h1>
+        <p>Print this page or save it as a PDF for game night.</p>
+        <div class="actions">
+          <button class="button" onclick="window.print()">Print Rule Sheet</button>
+          <a class="button secondary" href="../play/">Full Rules</a>
+        </div>
+      </div>
+
+      <section>
+        <h2>Setup</h2>
+        <table class="rules-table">
+          <tbody>
+            <tr><th scope="row">Players</th><td>2 to 6.</td></tr>
+            <tr><th scope="row">Deck</th><td>One deck plus 2 jokers.</td></tr>
+            <tr><th scope="row">Deal</th><td>Each player gets 7 cards. The dealer gets 8 and starts.</td></tr>
+            <tr><th scope="row">Goal</th><td>Get rid of your cards. Low score wins.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Wild Cards</h2>
+        <p>Jokers are always wild. The hand number sets the other wild card:</p>
+        <p>A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K.</p>
+      </section>
+
+      <section>
+        <h2>Turn</h2>
+        <ol>
+          <li>Draw from the deck or discard pile.</li>
+          <li>Play sets, runs, or add to melds if you can.</li>
+          <li>Discard 1 card to end your turn.</li>
+        </ol>
+        <p>The first dealer turn skips the draw because the dealer already has 8 cards.</p>
+      </section>
+
+      <section>
+        <h2>Melds</h2>
+        <ul>
+          <li>A set is 3 or more cards with the same rank.</li>
+          <li>A run is 3 or more cards in order and in the same suit.</li>
+          <li>Aces are low. A-2-3 works. Q-K-A does not.</li>
+          <li>Open with your own set or run before adding to another player.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Scoring</h2>
+        <table class="rules-table">
+          <tbody>
+            <tr><th scope="row">Player went out</th><td>0 points.</td></tr>
+            <tr><th scope="row">Aces</th><td>1 point, unless wild.</td></tr>
+            <tr><th scope="row">2 to 10</th><td>Face value.</td></tr>
+            <tr><th scope="row">J, Q, K</th><td>10 points.</td></tr>
+            <tr><th scope="row">Wild rank</th><td>20 points.</td></tr>
+            <tr><th scope="row">Joker</th><td>20 points.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>Kings 1.0 · SCIM Ventures · Copyright 2026</span>
+        <span><a href="../">Home</a> · <a href="../support/">Support</a></span>
+      </div>
+    </footer>
+  </body>
+</html>
