@@ -1,0 +1,49 @@
+name: Kings Support Request
+description: Ask for help with the Kings iOS app. Public requests only.
+title: "Support: "
+labels:
+  - support
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for using Kings. Support requests here are public. Do not include phone numbers, home addresses, private family details, or other sensitive personal information.
+  - type: input
+    id: app-version
+    attributes:
+      label: Kings app version
+      description: You can find this in the App Store or inside the app if available.
+      placeholder: "Example: 1.0"
+  - type: input
+    id: device
+    attributes:
+      label: Device and iOS version
+      placeholder: "Example: iPhone 15, iOS 18"
+  - type: dropdown
+    id: area
+    attributes:
+      label: What do you need help with?
+      options:
+        - Starting or setting up a game
+        - Scoring a hand
+        - Scoreboard or totals
+        - Game history or player stats
+        - Sharing a game summary
+        - iCloud scorebook sharing
+        - Player photos
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Tell us what you expected, what happened instead, and any steps that repeat the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Helpful details
+      description: For scoring issues, include player count, hand number, wild rank, and the scores involved.
+
