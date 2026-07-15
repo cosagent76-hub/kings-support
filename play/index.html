@@ -18,6 +18,7 @@
           <a href="./">How to Play</a>
           <a href="../support/">Support</a>
           <a href="../privacy/">Privacy</a>
+          <a href="../age/">Age Info</a>
           <a href="https://github.com/cosagent76-hub/kings-support/issues/new?template=support.yml">Request Help</a>
         </div>
       </nav>
@@ -28,6 +29,38 @@
         <h1>How to Play Kings</h1>
         <p>Kings is a family card game played over 13 hands. The goal is simple: end the game with the lowest score.</p>
       </div>
+
+      <section>
+        <h2>Rules at a Glance</h2>
+        <table class="rules-table">
+          <tbody>
+            <tr>
+              <th scope="row">Players</th>
+              <td>2 to 6 players.</td>
+            </tr>
+            <tr>
+              <th scope="row">Deck</th>
+              <td>One deck plus 2 jokers.</td>
+            </tr>
+            <tr>
+              <th scope="row">Deal</th>
+              <td>Each player gets 7 cards. The dealer gets 8 and starts.</td>
+            </tr>
+            <tr>
+              <th scope="row">Hands</th>
+              <td>13 hands. Wild cards go A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K.</td>
+            </tr>
+            <tr>
+              <th scope="row">Goal</th>
+              <td>Get rid of your cards. Lowest total score wins.</td>
+            </tr>
+            <tr>
+              <th scope="row">Score</th>
+              <td>Going out is 0. Wilds and jokers are 20. Face cards are 10. Aces are 1 unless wild.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
       <section>
         <h2>What You Need</h2>
@@ -96,6 +129,48 @@
       </section>
 
       <section>
+        <h2>Card Examples</h2>
+        <div class="card-examples">
+          <article class="panel">
+            <h3>Set</h3>
+            <div class="card-line" aria-label="Three eights">
+              <span class="playing-card">8♣</span>
+              <span class="playing-card red">8♦</span>
+              <span class="playing-card red">8♥</span>
+            </div>
+            <p>Same rank. Suits can be different.</p>
+          </article>
+          <article class="panel">
+            <h3>Run</h3>
+            <div class="card-line" aria-label="Four five six of hearts">
+              <span class="playing-card red">4♥</span>
+              <span class="playing-card red">5♥</span>
+              <span class="playing-card red">6♥</span>
+            </div>
+            <p>Same suit. Cards are in order.</p>
+          </article>
+          <article class="panel">
+            <h3>Wild in a Run</h3>
+            <div class="card-line" aria-label="Four hearts wild six hearts">
+              <span class="playing-card red">4♥</span>
+              <span class="playing-card wild">W</span>
+              <span class="playing-card red">6♥</span>
+            </div>
+            <p>The wild can stand for the missing 5 of hearts.</p>
+          </article>
+          <article class="panel">
+            <h3>Wild Replacement</h3>
+            <div class="card-line" aria-label="Five hearts replaces wild">
+              <span class="playing-card red">5♥</span>
+              <span class="playing-card">→</span>
+              <span class="playing-card wild">W</span>
+            </div>
+            <p>If you have the real card, you may replace the wild and take it.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
         <h2>Opening</h2>
         <p>Before you can add cards to another player's meld, you must open. To open, put down your own set or run.</p>
         <p>After you open, you may add cards to your own melds or to other players' melds. You may open and add to other melds on the same turn.</p>
@@ -127,22 +202,46 @@
       </section>
 
       <section>
+        <h2>Sample Hand</h2>
+        <p>It is hand 4, so 4s are wild. Alex goes out. Alex gets 0 points.</p>
+        <p>Sam has Q, 7, and a joker left. Sam scores 10 + 7 + 20 = 37.</p>
+        <p>The app adds each score to the game total and moves to the next hand.</p>
+      </section>
+
+      <section>
+        <h2>Common Mistakes</h2>
+        <ul>
+          <li>Forgetting which card is wild this hand.</li>
+          <li>Scoring Jacks, Queens, and Kings as more than 10.</li>
+          <li>Thinking you need a final discard. You do not.</li>
+          <li>Adding to another player's meld before you open.</li>
+          <li>Putting wild cards next to each other in a run.</li>
+        </ul>
+      </section>
+
+      <section>
         <h2>If a Hand Gets Stuck</h2>
         <p>If no one can finish and the hand gets stuck, count the cards left in each hand and move to the next hand.</p>
       </section>
 
       <section>
         <h2>Using the Kings App</h2>
-        <p>The Kings app tracks the hand number, wild card, scores, totals, game history, and player stats. It does not play the cards for you. It helps keep score while you play at the table.</p>
+        <ol>
+          <li>Start a game and choose the players.</li>
+          <li>Play the hand with real cards at the table.</li>
+          <li>When the hand ends, enter each player's score.</li>
+          <li>Use Score Hand to move from the scoreboard to the next score entry.</li>
+          <li>After hand 13, review the final summary and saved history.</li>
+        </ol>
+        <p>The app does not play the cards for you. It helps keep score while you play.</p>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <span>Copyright 2026 SCIM Ventures</span>
-        <span><a href="../">Home</a> · <a href="../support/">Support</a> · <a href="../privacy/">Privacy</a></span>
+        <span>Kings 1.0 · SCIM Ventures · Copyright 2026</span>
+        <span><a href="../">Home</a> · <a href="../support/">Support</a> · <a href="../privacy/">Privacy</a> · <a href="../age/">Age Info</a></span>
       </div>
     </footer>
   </body>
 </html>
-
