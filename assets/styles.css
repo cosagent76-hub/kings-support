@@ -37,6 +37,7 @@ body {
   color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.55;
+  overflow-x: hidden;
 }
 
 a {
@@ -511,15 +512,48 @@ main {
 }
 
 @media (max-width: 760px) {
+  .nav,
+  .hero,
+  main,
+  .footer-inner {
+    width: calc(100vw - 48px);
+    max-width: calc(100vw - 48px);
+  }
+
   .nav {
     align-items: flex-start;
     flex-direction: column;
     padding: 14px 0;
   }
 
+  .nav-links {
+    width: 100%;
+    gap: 10px 14px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     padding-top: 40px;
+  }
+
+  .hero h1,
+  .page-title h1 {
+    font-size: 1.85rem;
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  .hero p,
+  .page-title p,
+  .content p,
+  .content li,
+  .panel p,
+  .panel li {
+    overflow-wrap: break-word;
   }
 
   .hero-art {
@@ -541,10 +575,18 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .panel,
+  .notice,
+  .screenshot-card,
+  .rules-table {
+    max-width: 100%;
+  }
+
   .rules-table th,
   .rules-table td {
     display: block;
     width: 100%;
+    overflow-wrap: break-word;
   }
 
   .rules-table th {
