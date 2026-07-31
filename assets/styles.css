@@ -541,6 +541,21 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .rules-table th,
+  .rules-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .rules-table th {
+    border-bottom: 0;
+    padding-bottom: 4px;
+  }
+
+  .rules-table td {
+    padding-top: 0;
+  }
+
   .print-hero {
     display: block;
   }
