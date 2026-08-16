@@ -156,6 +156,12 @@ a {
   color: var(--accent);
 }
 
+.button.store-button::before {
+  content: "↗";
+  margin-right: 8px;
+  font-weight: 900;
+}
+
 button.button {
   font: inherit;
   cursor: pointer;
@@ -322,6 +328,25 @@ main {
   margin-top: 10px;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.screenshot-card.app-store-shot img {
+  aspect-ratio: 1242 / 2688;
+  object-fit: cover;
+}
+
+.screenshot-card.ipad-shot img {
+  aspect-ratio: 2064 / 2752;
+  object-fit: cover;
+}
+
+.release-notes {
+  white-space: pre-line;
+}
+
+.metadata-note {
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .card-line {
