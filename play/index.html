@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>How to Play Kings</title>
     <meta name="description" content="Plain-language rules for playing Kings, the family card game tracked by the Kings iOS app.">
-    <link rel="stylesheet" href="../assets/styles.css?v=20260816-flow">
+    <link rel="stylesheet" href="../assets/styles.css?v=20260817-flow2">
   </head>
   <body>
     <header class="site-header">
@@ -44,16 +44,28 @@
           <div class="step-copy">
             <p class="step-label">Step 1</p>
             <h2>Set Up the Table</h2>
-            <p>Play with 2 to 6 people. Use one deck of cards plus two jokers. Sit so every player can see their own cards and nobody else's hand.</p>
+            <p>Play with 2 to 6 people. Use one deck of cards plus two jokers. Sit so you can see your cards, but other players cannot.</p>
             <ul>
               <li>Pick the first dealer.</li>
               <li>Open Kings if you want the app to track players, wilds, and scores.</li>
               <li>Keep the phone on the table like a score sheet, not as the center of the game.</li>
             </ul>
           </div>
-          <div class="step-visual setup-visual" aria-label="Kings app player setup for 2 to 6 players">
-            <img class="phone-preview" loading="lazy" src="../assets/screenshots/app-store-1.3.0/iphone-6.5/05-start-with-the-people.jpg" alt="Kings app player setup screen.">
-            <div class="player-badge">2-6 players</div>
+          <div class="step-visual table-setup-visual" aria-label="Table setup showing 2 to 6 players, private hands, draw pile, discard pile, and phone scorekeeper">
+            <div class="table-diagram" aria-hidden="true">
+              <div class="seat seat-top">Player</div>
+              <div class="seat seat-right">Player</div>
+              <div class="seat seat-bottom">Player</div>
+              <div class="seat seat-left">Player</div>
+              <div class="table-surface">
+                <div class="table-piles">
+                  <div class="card-back stack-back"></div>
+                  <img class="rule-card small-card" src="../assets/cards/7_of_diamonds.png" alt="">
+                </div>
+                <div class="phone-token">Kings app</div>
+              </div>
+            </div>
+            <div class="setup-note">2-6 players, cards face the player holding them.</div>
           </div>
         </article>
 
@@ -75,8 +87,8 @@
             </div>
             <div class="score-card count-score">
               <strong>Cards left</strong>
-              <span>37</span>
-              <small>points</small>
+              <span class="score-word">count</span>
+              <small>what is left</small>
             </div>
           </div>
         </article>
@@ -92,18 +104,25 @@
               <li>The dealer starts the discard pile at the end of that first turn.</li>
             </ul>
           </div>
-          <div class="step-visual deal-visual" aria-label="Each player gets seven cards and the dealer gets eight">
-            <div>
+          <div class="step-visual deal-visual" aria-label="Each player gets seven cards, dealer gets eight, and the first discard starts the discard pile">
+            <div class="deal-block">
               <div class="back-fan seven-cards" aria-hidden="true">
                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
               </div>
               <p>Each player: 7</p>
             </div>
-            <div>
+            <div class="deal-block">
               <div class="back-fan eight-cards" aria-hidden="true">
                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
               </div>
               <p>Dealer: 8</p>
+            </div>
+            <div class="deal-block first-discard">
+              <div class="table-piles">
+                <div class="card-back stack-back" aria-hidden="true"></div>
+                <img class="rule-card small-card" loading="lazy" src="../assets/cards/7_of_diamonds.png" alt="7 of diamonds starts the discard pile">
+              </div>
+              <p>Dealer discards to start the pile</p>
             </div>
           </div>
         </article>
@@ -139,8 +158,8 @@
             <p>Most turns have the same three moves: draw 1 card, play cards if you can, then discard 1 card.</p>
             <ul>
               <li>Draw from the deck or take the top discard.</li>
-              <li>You may play more than one meld or add more than one card if the play is legal.</li>
-              <li>Discarding ends your turn.</li>
+              <li>You may play more than one set or run, or add more than one card if the play is legal.</li>
+              <li>Discarding ends your turn unless your play used your last card.</li>
             </ul>
           </div>
           <div class="step-visual turn-visual" aria-label="Draw, play, discard turn flow">
@@ -160,7 +179,7 @@
             <div class="turn-arrow">→</div>
             <div class="pile-block">
               <img class="rule-card small-card" loading="lazy" src="../assets/cards/7_of_diamonds.png" alt="7 of diamonds discard">
-              <span>Discard 1</span>
+              <span>Discard 1 unless out</span>
             </div>
           </div>
         </article>
@@ -169,10 +188,11 @@
           <div class="step-copy">
             <p class="step-label">Step 6</p>
             <h2>Make Sets</h2>
-            <p>A set is 3 or more cards with the same rank. Suits can be different. You only need 3 cards to lay a set down, but a set can grow to 4 natural cards.</p>
+            <p>A set is 3 or more cards with the same rank. Suits can be different. You only need 3 cards to lay a set down, but a set can grow to 4 real cards.</p>
             <ul>
               <li>Wild cards can help make a set.</li>
-              <li>The set must have more natural cards than wild cards.</li>
+              <li>Real cards are cards that are not wild.</li>
+              <li>The set must have more real cards than wild cards.</li>
               <li>When a wild is used in a set, lay it sideways across the bottom.</li>
             </ul>
           </div>
@@ -185,7 +205,7 @@
                   <img class="real-card wild-sideways" loading="lazy" src="../assets/cards/8_of_hearts.png" alt="8 of hearts wild laid sideways">
                   <span class="red-callout">wild</span>
                 </div>
-                <figcaption>2 natural 3s + 1 wild</figcaption>
+                <figcaption>2 real 3s + 1 wild</figcaption>
               </figure>
               <figure>
                 <div class="real-set three-plus-wild">
@@ -195,7 +215,7 @@
                   <img class="real-card wild-sideways" loading="lazy" src="../assets/cards/8_of_hearts.png" alt="8 of hearts wild laid sideways">
                   <span class="red-callout">wild</span>
                 </div>
-                <figcaption>3 natural 3s + 1 wild</figcaption>
+                <figcaption>3 real 3s + 1 wild</figcaption>
               </figure>
               <figure>
                 <div class="real-set natural-three">
@@ -203,7 +223,7 @@
                   <img class="real-card c2" loading="lazy" src="../assets/cards/3_of_diamonds.png" alt="3 of diamonds">
                   <img class="real-card c3" loading="lazy" src="../assets/cards/3_of_spades.png" alt="3 of spades">
                 </div>
-                <figcaption>3 natural cards</figcaption>
+                <figcaption>3 real cards</figcaption>
               </figure>
               <figure>
                 <div class="real-set natural-four">
@@ -212,7 +232,7 @@
                   <img class="real-card c3" loading="lazy" src="../assets/cards/3_of_hearts.png" alt="3 of hearts">
                   <img class="real-card c4" loading="lazy" src="../assets/cards/3_of_spades.png" alt="3 of spades">
                 </div>
-                <figcaption>4 natural cards</figcaption>
+                <figcaption>4 real cards</figcaption>
               </figure>
             </div>
           </div>
@@ -225,7 +245,7 @@
             <p>A run is 3 or more cards in order, all in the same suit. Aces are low, so A-2-3 works. Q-K-A does not.</p>
             <ul>
               <li>A wild in a run stays upright in the spot where the missing card belongs.</li>
-              <li>A run must have at least as many natural cards as wild cards.</li>
+              <li>A run must have at least as many real cards as wild cards.</li>
               <li>Wild cards cannot sit next to each other in a run.</li>
             </ul>
           </div>
@@ -236,7 +256,7 @@
                 <img class="real-card" loading="lazy" src="../assets/cards/5_of_hearts.png" alt="5 of hearts">
                 <img class="real-card" loading="lazy" src="../assets/cards/6_of_hearts.png" alt="6 of hearts">
               </div>
-              <figcaption>Natural run: 4-5-6 of hearts</figcaption>
+              <figcaption>Real run: 4-5-6 of hearts</figcaption>
             </figure>
             <figure class="run-example">
               <div class="real-run">
@@ -258,7 +278,7 @@
                 </span>
                 <img class="real-card" loading="lazy" src="../assets/cards/6_of_spades.png" alt="6 of spades">
               </div>
-              <figcaption>Same idea with spades: 4 - wild - 6</figcaption>
+              <figcaption>Spades run: the wild stands for 5♠</figcaption>
             </figure>
           </div>
         </article>
@@ -266,8 +286,8 @@
         <article class="how-step">
           <div class="step-copy">
             <p class="step-label">Step 8</p>
-            <h2>Open Before You Add</h2>
-            <p>Before you can add cards to another player's meld, you must open by laying down your own set or run.</p>
+            <h2>Play Your Own Meld Before Adding</h2>
+            <p>Before you can add cards to another player's meld, lay down your own set or run first. A meld means any set or run. This is called opening.</p>
             <ul>
               <li>You may open and add to another meld on the same turn.</li>
               <li>You still need to follow the normal turn order: draw, play, discard.</li>
@@ -275,7 +295,7 @@
           </div>
           <div class="step-visual open-visual" aria-label="Open with your own meld, then add a card that fits">
             <div class="open-panel">
-              <strong>1. Open</strong>
+              <strong>1. Your meld first</strong>
               <div class="real-set compact-real-set">
                 <img class="real-card c1" loading="lazy" src="../assets/cards/3_of_clubs.png" alt="3 of clubs">
                 <img class="real-card c2" loading="lazy" src="../assets/cards/3_of_diamonds.png" alt="3 of diamonds">
@@ -284,7 +304,7 @@
             </div>
             <div class="turn-arrow">→</div>
             <div class="open-panel">
-              <strong>2. Add</strong>
+              <strong>2. Then add</strong>
               <div class="real-run add-run">
                 <img class="real-card" loading="lazy" src="../assets/cards/4_of_hearts.png" alt="4 of hearts">
                 <img class="real-card" loading="lazy" src="../assets/cards/5_of_hearts.png" alt="5 of hearts">
@@ -299,13 +319,13 @@
           <div class="step-copy">
             <p class="step-label">Step 9</p>
             <h2>Replace or Cover a Wild</h2>
-            <p>If you have the real card that a wild is standing for, you may play the real card. Then you either take the wild into your hand or cover the wild in the run.</p>
+            <p>If you have the real card that a wild is standing for, you may play the real card. Then choose one of two legal options.</p>
             <ul>
-              <li>Replacing gives you the wild to use later.</li>
-              <li>Covering leaves the wild under the real card in that run.</li>
+              <li>Replace it: take the wild into your hand to use later.</li>
+              <li>Cover it: leave the wild under the real card in that run.</li>
             </ul>
           </div>
-          <div class="step-visual replace-visual" aria-label="Wild replacement before and after">
+          <div class="step-visual replace-visual" aria-label="Wild replacement and covering options before and after">
             <div class="replace-panel">
               <strong>Before</strong>
               <div class="real-run">
@@ -322,7 +342,7 @@
               </div>
             </div>
             <div class="replace-panel">
-              <strong>After</strong>
+              <strong>Option 1: replace</strong>
               <div class="real-run">
                 <img class="real-card" loading="lazy" src="../assets/cards/4_of_spades.png" alt="4 of spades">
                 <img class="real-card" loading="lazy" src="../assets/cards/5_of_spades.png" alt="5 of spades">
@@ -331,6 +351,20 @@
               <div class="hand-card-real">
                 <img class="real-card highlighted-wild" loading="lazy" src="../assets/cards/8_of_diamonds.png" alt="8 of diamonds wild now in hand">
                 <span>wild to use</span>
+              </div>
+            </div>
+            <div class="replace-panel">
+              <strong>Option 2: cover</strong>
+              <div class="real-run">
+                <img class="real-card" loading="lazy" src="../assets/cards/4_of_spades.png" alt="4 of spades">
+                <span class="covered-wild-card">
+                  <img class="real-card covered-back" loading="lazy" src="../assets/cards/8_of_diamonds.png" alt="8 of diamonds wild covered by the 5 of spades">
+                  <img class="real-card covered-front" loading="lazy" src="../assets/cards/5_of_spades.png" alt="5 of spades covering the wild">
+                </span>
+                <img class="real-card" loading="lazy" src="../assets/cards/6_of_spades.png" alt="6 of spades">
+              </div>
+              <div class="hand-card-real">
+                <span>wild stays under 5♠</span>
               </div>
             </div>
           </div>
@@ -368,7 +402,7 @@
               <li>Start a game and choose the players.</li>
               <li>Check the wild card before scoring.</li>
               <li>Enter each player's score when the hand ends.</li>
-              <li>Review totals, history, records, and final summaries.</li>
+              <li>See who won, review past games, and share the final score.</li>
             </ul>
           </div>
           <div class="step-visual app-visual" aria-label="Kings app wild and scoreboard screenshots">
@@ -381,10 +415,10 @@
           <div class="step-copy">
             <p class="step-label">Step 12</p>
             <h2>Keep Help Close</h2>
-            <p>Replay the rules in the app, print the one-page rules, or open the help portal when your table wants a refresher or wants to try variations.</p>
+            <p>Replay the rules in the app, print the one-page rules, or open more help when your table wants a refresher or wants to try variations.</p>
             <div class="actions">
               <a class="button store-button" data-app-store-link href="https://apps.apple.com/us/app/kings-card-game-scoring/id6791298125">Download on the App Store</a>
-              <a class="button secondary" href="../support/">Help Portal</a>
+              <a class="button secondary" href="../support/">More Rules &amp; Variations</a>
               <a class="button secondary" href="../printable/">Print Rules</a>
             </div>
           </div>

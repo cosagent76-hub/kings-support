@@ -301,7 +301,7 @@ main {
 .how-step {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1.1fr);
-  align-items: center;
+  align-items: start;
   gap: 28px;
   padding: 34px 0;
   border-top: 1px solid var(--line);
@@ -353,6 +353,97 @@ main {
 .setup-visual,
 .help-visual {
   position: relative;
+}
+
+.table-setup-visual {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+}
+
+.table-diagram {
+  position: relative;
+  width: min(430px, 100%);
+  min-height: 286px;
+  display: grid;
+  place-items: center;
+}
+
+.table-surface {
+  width: min(270px, 76%);
+  min-height: 154px;
+  border: 2px solid rgba(30, 122, 107, 0.25);
+  border-radius: 999px;
+  background: #f7efe4;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.42), 0 14px 28px rgba(26, 24, 20, 0.14);
+}
+
+.table-piles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.phone-token,
+.seat,
+.setup-note {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.phone-token {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #111111;
+  color: #ffffff;
+  padding: 6px 12px;
+}
+
+.seat {
+  position: absolute;
+  min-width: 78px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  padding: 8px 12px;
+}
+
+.seat::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 28px;
+  margin: 7px auto 0;
+  border: 1px solid #c7d6e4;
+  border-radius: 5px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.18) 25%, transparent 25%) 0 0 / 9px 9px,
+    linear-gradient(315deg, rgba(255,255,255,0.16) 25%, transparent 25%) 0 0 / 9px 9px,
+    #244f7d;
+}
+
+.seat-top {
+  top: 0;
+}
+
+.seat-right {
+  right: 0;
+  top: 92px;
+}
+
+.seat-bottom {
+  bottom: 2px;
+}
+
+.seat-left {
+  left: 0;
+  top: 92px;
 }
 
 .phone-preview {
@@ -416,8 +507,18 @@ main {
   font-weight: 800;
 }
 
+.score-card .score-word {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
 .deal-visual {
   justify-content: space-around;
+}
+
+.deal-block {
+  display: grid;
+  justify-items: center;
 }
 
 .deal-visual p,
@@ -674,7 +775,12 @@ main {
 }
 
 .open-visual {
+  flex-direction: column;
   flex-wrap: nowrap;
+}
+
+.open-visual .turn-arrow {
+  transform: rotate(90deg);
 }
 
 .open-panel,
@@ -696,24 +802,52 @@ main {
 
 .replace-visual {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 
 .replace-panel {
-  border-left: 1px solid var(--line);
-  padding-left: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
 }
 
 .replace-panel:first-child {
-  border-left: 0;
-  padding-left: 0;
+  border-top: 0;
+  padding-top: 0;
 }
 
 .hand-card-real {
   display: grid;
   justify-items: center;
   gap: 8px;
+}
+
+.covered-wild-card {
+  position: relative;
+  width: 82px;
+  min-height: 112px;
+  display: inline-block;
+}
+
+.covered-wild-card .real-card {
+  position: absolute;
+  width: 72px;
+}
+
+.covered-back {
+  left: 0;
+  top: 8px;
+  opacity: 0.7;
+  transform: rotate(-8deg);
+}
+
+.covered-front {
+  left: 10px;
+  top: 0;
+  z-index: 2;
+  border-radius: 6px;
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .count-visual {
@@ -1053,6 +1187,26 @@ main {
     width: min(136px, 42%);
   }
 
+  .table-diagram {
+    min-height: 270px;
+  }
+
+  .table-surface {
+    width: 210px;
+    min-height: 150px;
+  }
+
+  .seat {
+    min-width: 68px;
+    font-size: 0.76rem;
+    padding: 7px 9px;
+  }
+
+  .seat-right,
+  .seat-left {
+    top: 104px;
+  }
+
   .large-phone {
     width: min(210px, 72%);
   }
@@ -1133,6 +1287,15 @@ main {
 
   .real-run {
     gap: 7px;
+  }
+
+  .covered-wild-card {
+    width: 68px;
+    min-height: 92px;
+  }
+
+  .covered-wild-card .real-card {
+    width: 58px;
   }
 
   .add-run .real-card {
