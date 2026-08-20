@@ -9,17 +9,26 @@ body:
       value: |
         Thanks for using Kings. Support requests here are public. Do not include phone numbers, home addresses, private family details, or other sensitive personal information.
         If you attach screenshots, crop or cover player names, player photos, or anything else you do not want public.
+        Before submitting, open Kings and go to Settings > About Kings > Copy Support Details. Paste those details below.
+        Copied support details are designed to be privacy-safe. They do not include player names, scores, game history, Apple IDs, iCloud record IDs, or scorebook names.
   - type: input
     id: app-version
     attributes:
       label: Kings app version
-      description: You can find this in the App Store or inside the app if available. If you are not sure, write "not sure."
-      placeholder: "Example: version shown on your device"
+      description: This is included in Copy Support Details. If you cannot copy support details, write "not sure."
+      placeholder: "Example: version shown in Copy Support Details"
   - type: input
     id: device
     attributes:
       label: Device and iOS version
+      description: This is included in Copy Support Details. If you cannot copy support details, write what you know.
       placeholder: "Example: iPhone 15, iOS 18"
+  - type: textarea
+    id: copied-support-details
+    attributes:
+      label: Copied support details
+      description: In Kings, open Settings > About Kings > Copy Support Details, then paste the copied text here.
+      placeholder: "Paste the copied Kings support details here."
   - type: dropdown
     id: area
     attributes:
@@ -46,4 +55,4 @@ body:
     id: extra
     attributes:
       label: Helpful details
-      description: For scoring issues, include player count, hand number, wild rank, and the scores involved.
+      description: For scoring issues, include player count, hand number, wild rank, and what looked wrong. Do not include private player names or screenshots with private details visible.
