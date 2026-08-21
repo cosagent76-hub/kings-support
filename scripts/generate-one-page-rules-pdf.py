@@ -5,7 +5,6 @@ from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import inch
-from reportlab.pdfbase.pdfmetrics import stringWidth
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph
 
@@ -154,12 +153,59 @@ def draw_footer(c, width):
     y = 0.34 * inch
     c.setStrokeColor(LINE)
     c.line(0.55 * inch, y + 22, width - 0.55 * inch, y + 22)
-    text(c, 0.6 * inch, y + 8, "Download Kings:", 7.2, MUTED, "Helvetica-Bold")
-    text(c, 1.33 * inch, y + 8, APP_STORE_URL, 7.0, GREEN)
-    text(c, 0.6 * inch, y - 3, "Full rules and help:", 7.2, MUTED, "Helvetica-Bold")
-    text(c, 1.48 * inch, y - 3, HELP_URL, 7.0, GREEN)
-    c.linkURL(APP_STORE_URL, (1.31 * inch, y + 6, 4.95 * inch, y + 17), relative=0)
-    c.linkURL(HELP_URL, (1.46 * inch, y - 5, 4.9 * inch, y + 6), relative=0)
+    text(c, 0.6 * inch, y + 8, "Get Kings:", 7.2, MUTED, "Helvetica-Bold")
+    text(c, 1.18 * inch, y + 8, APP_STORE_URL, 7.0, GREEN)
+    text(c, 0.6 * inch, y - 3, "Help:", 7.2, MUTED, "Helvetica-Bold")
+    text(c, 0.96 * inch, y - 3, HELP_URL, 7.0, GREEN)
+    c.linkURL(APP_STORE_URL, (1.16 * inch, y + 6, 4.95 * inch, y + 17), relative=0)
+    c.linkURL(HELP_URL, (0.94 * inch, y - 5, 4.9 * inch, y + 6), relative=0)
+
+
+def draw_reference_box(c, x, y, w, h, title, lines):
+    draw_round_rect(c, x, y, w, h, radius=8, fill=colors.HexColor("#fffdf8"), stroke=LINE, width=0.8)
+    text(c, x + 10, y + h - 17, title.upper(), 8.4, GREEN, "Helvetica-Bold")
+    c.setStrokeColor(GOLD)
+    c.setLineWidth(0.8)
+    c.line(x + 10, y + h - 21, x + 98, y + h - 21)
+    line_y = y + h - 36
+    for line in lines:
+        text(c, x + 12, line_y, "-", 7.6, GREEN, "Helvetica-Bold")
+        text(c, x + 23, line_y, line, 7.45, colors.HexColor("#222222"))
+        line_y -= 11
+
+
+def draw_bottom_reference(c, width):
+    y = 1.02 * inch
+    h = 0.98 * inch
+    gap = 0.18 * inch
+    x = 0.62 * inch
+    w = (width - 1.24 * inch - gap) / 2
+    draw_reference_box(
+        c,
+        x,
+        y,
+        w,
+        h,
+        "Table reminders",
+        [
+            "Keep hands private around the table.",
+            "Dealer gets 8 and skips the first draw.",
+            "Use Kings as the scorekeeper, not the card dealer.",
+        ],
+    )
+    draw_reference_box(
+        c,
+        x + w + gap,
+        y,
+        w,
+        h,
+        "Optional table rules",
+        [
+            "Learning game: keep the help page open.",
+            "Short game: stop after an agreed hand.",
+            "House rules: agree before hand 1 starts.",
+        ],
+    )
 
 
 def build():
@@ -224,6 +270,7 @@ def build():
     y = bullet(c, left_x, y, col_w, "If you can go out, you must go out and the hand ends right away.")
     y = bullet(c, left_x, y, col_w, "Aces count 1. Cards 2-10 count their number. Jacks, Queens, and Kings count 10. Jokers and the wild rank count 20.")
 
+    draw_bottom_reference(c, width)
     draw_footer(c, width)
     c.setTitle("Kings One-Page Rules")
     c.setAuthor("SCIM Ventures")
