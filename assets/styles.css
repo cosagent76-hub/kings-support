@@ -163,6 +163,40 @@ a {
   height: auto;
 }
 
+.hero-app-card {
+  justify-self: end;
+  width: min(330px, 100%);
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.hero-app-card .hero-art {
+  justify-self: start;
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 18px;
+  border-radius: 32px;
+}
+
+.hero-app-card strong,
+.hero-app-card span {
+  display: block;
+}
+
+.hero-app-card strong {
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.hero-app-card span {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
 .section-heading {
   max-width: 760px;
   margin-bottom: 18px;
@@ -1264,6 +1298,18 @@ main {
 
   .hero-rule-preview {
     max-width: 260px;
+  }
+
+  .hero-app-card {
+    justify-self: start;
+    width: min(260px, 100%);
+    padding: 18px;
+  }
+
+  .hero-app-card .hero-art {
+    width: 112px;
+    height: 112px;
+    border-radius: 24px;
   }
 
   .hero h1,
