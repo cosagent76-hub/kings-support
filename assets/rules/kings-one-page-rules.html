@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kings One-Page Rules</title>
+    <style>
+      @page {
+        size: Letter;
+        margin: 0;
+      }
+
+      :root {
+        --ink: #17211d;
+        --muted: #5d625d;
+        --green: #126a5b;
+        --green-dark: #082b23;
+        --gold: #efb432;
+        --paper: #f8f2e7;
+        --panel: #fffdfa;
+        --line: #ddcfbd;
+        --red: #c9222d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      }
+
+      body {
+        width: 8.5in;
+        height: 11in;
+      }
+
+      .page {
+        width: 8.5in;
+        height: 11in;
+        padding: 0.36in 0.44in 0.28in;
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        gap: 0.12in;
+      }
+
+      .hero {
+        background: var(--green-dark);
+        border-radius: 18px;
+        color: white;
+        padding: 0.2in 0.26in 0.18in;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.22in;
+        align-items: center;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 29px;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .tagline {
+        color: var(--gold);
+        font-size: 13px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .starter {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.1in;
+      }
+
+      .starter-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 0.1in 0.12in;
+      }
+
+      .starter-card strong {
+        display: block;
+        color: var(--green);
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.03in;
+      }
+
+      .starter-card span {
+        display: block;
+        font-size: 10.4px;
+        line-height: 1.25;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 0.18in;
+        min-height: 0;
+      }
+
+      .flow {
+        display: grid;
+        gap: 0.085in;
+        align-content: start;
+      }
+
+      .section {
+        background: rgba(255, 253, 250, 0.75);
+        border-left: 4px solid var(--gold);
+        padding: 0.085in 0.11in 0.08in;
+      }
+
+      h2 {
+        margin: 0 0 0.04in;
+        color: var(--green);
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin: 0;
+        font-size: 11.2px;
+        line-height: 1.28;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        position: relative;
+        margin: 0 0 0.035in;
+        padding-left: 0.13in;
+        font-size: 11.2px;
+        line-height: 1.27;
+      }
+
+      li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.33em;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--green);
+      }
+
+      .side {
+        display: grid;
+        gap: 0.1in;
+        align-content: start;
+      }
+
+      .visual-panel,
+      .wild-panel,
+      .options-panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 0.13in;
+      }
+
+      .visual-title {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 850;
+        margin-bottom: 0.1in;
+      }
+
+      .example {
+        display: grid;
+        grid-template-columns: 0.92fr 1fr;
+        gap: 0.1in;
+        align-items: center;
+        padding: 0.06in 0;
+        border-top: 1px solid #ede2d3;
+      }
+
+      .example:first-of-type {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .example-label {
+        font-size: 9.6px;
+        line-height: 1.2;
+      }
+
+      .example-label strong {
+        display: block;
+        color: var(--green);
+        font-size: 10.2px;
+        margin-bottom: 2px;
+      }
+
+      .cards {
+        position: relative;
+        min-height: 0.66in;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .card {
+        width: 0.39in;
+        height: 0.546in;
+        object-fit: contain;
+        filter: drop-shadow(0 2px 2px rgba(15, 20, 16, 0.16));
+      }
+
+      .fan .card {
+        margin-right: -0.12in;
+      }
+
+      .run .card {
+        margin-right: 0.055in;
+      }
+
+      .wild-card {
+        outline: 2px solid var(--red);
+        border-radius: 4px;
+      }
+
+      .sideways-wild {
+        position: absolute;
+        left: 0.41in;
+        bottom: -0.03in;
+        transform: rotate(90deg);
+      }
+
+      .arrow-note {
+        color: var(--red);
+        font-size: 8.7px;
+        font-weight: 800;
+      }
+
+      .score-row {
+        display: grid;
+        grid-template-columns: 1.6in 1fr;
+        gap: 0.13in;
+        align-items: center;
+      }
+
+      .score-cards {
+        display: flex;
+        gap: 0.045in;
+      }
+
+      .score-cards .card {
+        width: 0.31in;
+        height: 0.434in;
+      }
+
+      .score-example {
+        grid-template-columns: 1fr;
+      }
+
+      .wild-ranks {
+        display: grid;
+        grid-template-columns: repeat(13, 1fr);
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        margin-top: 0.06in;
+      }
+
+      .rank {
+        text-align: center;
+        padding: 0.035in 0;
+        font-size: 8px;
+        border-right: 1px solid var(--line);
+        background: #fff;
+      }
+
+      .rank:last-child {
+        border-right: 0;
+      }
+
+      .rank b {
+        display: block;
+        color: var(--green);
+        font-size: 8px;
+      }
+
+      .mini-list li {
+        font-size: 10.4px;
+        line-height: 1.22;
+        margin-bottom: 0.03in;
+      }
+
+      .footer {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.15in;
+        align-items: center;
+        border-top: 1px solid var(--line);
+        padding-top: 0.08in;
+        font-size: 8.8px;
+        color: var(--muted);
+      }
+
+      .links {
+        display: grid;
+        gap: 0.025in;
+      }
+
+      .links b {
+        color: var(--green-dark);
+      }
+
+      .links a {
+        color: var(--green);
+        text-decoration: none;
+      }
+
+      .small-note {
+        max-width: 2.15in;
+        text-align: right;
+        font-size: 8.5px;
+        line-height: 1.22;
+      }
+
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <h1>Kings One-Page Rules</h1>
+        <div class="tagline">2-6 players | 13 hands | lowest score wins</div>
+      </header>
+
+      <section class="starter" aria-label="Quick start">
+        <div class="starter-card">
+          <strong>Goal</strong>
+          <span>Go out first to score 0. Everyone else counts cards left in hand. Lowest total after hand 13 wins.</span>
+        </div>
+        <div class="starter-card">
+          <strong>On Your Turn</strong>
+          <span>Draw 1, play cards if you can, then discard 1. If your last card is played, the hand ends.</span>
+        </div>
+        <div class="starter-card">
+          <strong>Use The App</strong>
+          <span>Kings keeps score, tracks the wild rank, and saves game history. The cards are still played at the table.</span>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="flow">
+          <section class="section">
+            <h2>1. Setup</h2>
+            <ul>
+              <li>Use one standard deck plus two jokers.</li>
+              <li>Deal 7 cards to each player. The dealer gets 8 cards and takes the first turn.</li>
+              <li>The dealer does not draw first. The dealer discards 1 card to start the discard pile.</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2>2. Make Melds</h2>
+            <ul>
+              <li><b>Set:</b> 3 or 4 cards with the same rank. Suits do not matter. A set cannot have more than 4 cards total.</li>
+              <li><b>Run:</b> 3 or more cards in order, all the same suit. Aces are low, so A-2-3 works; Q-K-A does not.</li>
+              <li>You can lay down your own meld, then add to any player's meld on that same turn.</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2>3. Wild Cards</h2>
+            <ul>
+              <li>Jokers are always wild.</li>
+              <li>The wild rank changes by hand: hand 1 Aces, hand 2 Twos, and so on through hand 13 Kings.</li>
+              <li>In a set, the meld must have more real cards than wilds. Lay the wild sideways across the bottom.</li>
+              <li>In a run, place the wild upright where the missing card belongs. Wilds cannot sit next to each other.</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2>4. Opening, Adding, Going Out</h2>
+            <ul>
+              <li>Before adding to another player's meld, lay down your own set or run first. This is called opening.</li>
+              <li>If you have the real card a wild represents in a run, you may replace it and take the wild, or cover it and leave the wild underneath.</li>
+              <li>If you can go out, you must go out. You do not need a final discard.</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2>5. Scoring</h2>
+            <ul>
+              <li>Aces count 1. Cards 2-10 count their number. Jacks, Queens, and Kings count 10.</li>
+              <li>Jokers and the current wild rank count 20 if left in your hand.</li>
+              <li>Optional table rules are fine. Agree on them before hand 1 starts.</li>
+            </ul>
+          </section>
+        </div>
+
+        <aside class="side">
+          <section class="visual-panel">
+            <div class="visual-title">The three visuals to remember</div>
+            <div class="example">
+              <div class="cards fan">
+                <img class="card" src="../cards/3_of_clubs.png" alt="3 of clubs" />
+                <img class="card" src="../cards/3_of_diamonds.png" alt="3 of diamonds" />
+                <img class="card wild-card sideways-wild" src="../cards/8_of_hearts.png" alt="8 of hearts wild" />
+              </div>
+              <div class="example-label">
+                <strong>Set with a wild</strong>
+                Two real 3s plus a wild 8. The wild is sideways so everyone can see it is not a real 3.
+                <div class="arrow-note">red outline = wild</div>
+              </div>
+            </div>
+
+            <div class="example">
+              <div class="cards run">
+                <img class="card" src="../cards/4_of_spades.png" alt="4 of spades" />
+                <img class="card wild-card" src="../cards/8_of_diamonds.png" alt="8 of diamonds wild as 5 of spades" />
+                <img class="card" src="../cards/6_of_spades.png" alt="6 of spades" />
+              </div>
+              <div class="example-label">
+                <strong>Run with a wild</strong>
+                The wild stands upright in the missing spot. Here it acts as the 5 of spades.
+                <div class="arrow-note">no side-by-side wilds</div>
+              </div>
+            </div>
+
+            <div class="example score-example">
+              <div class="score-row">
+                <div class="score-cards">
+                  <img class="card" src="../cards/ace_of_hearts.png" alt="Ace of hearts" />
+                  <img class="card" src="../cards/7_of_diamonds.png" alt="7 of diamonds" />
+                  <img class="card" src="../cards/jack_of_spades.png" alt="Jack of spades" />
+                  <img class="card wild-card" src="../cards/joker_red.png" alt="Red joker" />
+                </div>
+                <div class="example-label">
+                  <strong>Cards left score points</strong>
+                  A=1, 2-10=face value, J/Q/K=10, wilds and jokers=20.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="wild-panel">
+            <h2>Wild Rank By Hand</h2>
+            <p>Hand number tells you what rank is wild.</p>
+            <div class="wild-ranks" aria-label="Wild rank by hand">
+              <div class="rank"><b>1</b>A</div>
+              <div class="rank"><b>2</b>2</div>
+              <div class="rank"><b>3</b>3</div>
+              <div class="rank"><b>4</b>4</div>
+              <div class="rank"><b>5</b>5</div>
+              <div class="rank"><b>6</b>6</div>
+              <div class="rank"><b>7</b>7</div>
+              <div class="rank"><b>8</b>8</div>
+              <div class="rank"><b>9</b>9</div>
+              <div class="rank"><b>10</b>10</div>
+              <div class="rank"><b>11</b>J</div>
+              <div class="rank"><b>12</b>Q</div>
+              <div class="rank"><b>13</b>K</div>
+            </div>
+          </section>
+
+          <section class="options-panel">
+            <h2>Table Reminders</h2>
+            <ul class="mini-list">
+              <li>Keep your hand private around the table.</li>
+              <li>Keep food and drinks away from the draw pile, discard pile, and melds.</li>
+              <li>Learning game: keep the help page open for examples.</li>
+              <li>Short game: stop after an agreed hand and lowest score wins.</li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+
+      <footer class="footer">
+        <div class="links">
+          <div><b>Download Kings:</b> <a href="https://apps.apple.com/us/app/kings-card-game-scoring/id6791298125">apps.apple.com/us/app/kings-card-game-scoring/id6791298125</a></div>
+          <div><b>Full help:</b> <a href="https://cosagent76-hub.github.io/kings-support/play/">cosagent76-hub.github.io/kings-support/play/</a></div>
+        </div>
+        <div class="small-note">Print one copy for the table. Use the app for scoring and the help page for deeper examples.</div>
+      </footer>
+    </main>
+  </body>
+</html>
