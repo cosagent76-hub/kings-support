@@ -1,11 +1,11 @@
 {
   "source": "https://itunes.apple.com/lookup?id=6791298125&country=us",
-  "fetchedAt": "2026-08-16T14:15:21.505Z",
+  "fetchedAt": "2026-08-28T16:18:43.950Z",
   "app": {
     "trackId": 6791298125,
     "trackName": "Kings Card Game Scoring",
-    "version": "1.3.0",
-    "currentVersionReleaseDate": "2026-08-14T18:49:56Z",
+    "version": "1.3.1",
+    "currentVersionReleaseDate": "2026-08-16T17:11:16Z",
     "releaseDate": "2026-07-22T07:00:00Z",
     "formattedPrice": "Free",
     "trackContentRating": "4+",
@@ -15,6 +15,6 @@
     "bundleId": "com.angusfamily.kings",
     "trackViewUrl": "https://apps.apple.com/us/app/kings-card-game-scoring/id6791298125?uo=4",
     "sellerUrl": "https://cosagent76-hub.github.io/kings-support/",
-    "releaseNotes": "This update adds Learn To Play, a native in-app guide for learning Kings during setup or anytime from Settings.\n\nIt also improves History and Records, refreshes Settings with clearer scorebook, sharing, help, display, and launch controls, improves iPad layouts across onboarding, scoring, History, and Settings, and keeps iPhone gameplay in portrait with tighter hand-entry polish."
+    "releaseNotes": "History and Records now include ASHL, Average Score per Hand Lost, so you can compare how efficiently each player scores when they do not win the hand.\n\nPlayer profiles have also been upgraded with ASHL, player-count filters, clearer History movement indicators, improved hand-by-hand detail, and cleaner iPad layouts for reviewing game-night results."
   }
 }
